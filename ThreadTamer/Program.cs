@@ -7,6 +7,7 @@
 
         await ChamadaApiAsync();
 
+        Console.WriteLine($"Main está agora executando na thread ID: {Environment.CurrentManagedThreadId}");
         Console.WriteLine("Fim do método Main");
     }
 
@@ -14,30 +15,29 @@
     {
         Console.WriteLine($"ChamadaApiAsync está executando na thread ID: {Environment.CurrentManagedThreadId}");
 
-        using (HttpClient client = new HttpClient())
+        using HttpClient client = new();
+        try
         {
-            try
-            {
-                Console.WriteLine("Iniciando a chamada da API...");
+            Console.WriteLine("Iniciando a chamada da API...");
 
-                HttpResponseMessage response = await client.GetAsync("https://jsonplaceholder.typicode.com/todos/1");
+            HttpResponseMessage response = await client.GetAsync("https://jsonplaceholder.typicode.com/todos/1");
 
-                if (response.IsSuccessStatusCode)
-                {
-                    string responseData = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine("Chamada da API concluída com sucesso!");
-                    Console.WriteLine("Dados recebidos: ");
-                    Console.WriteLine(responseData);
-                }
-                else
-                {
-                    Console.WriteLine($"Erro na chamada da API. Código de status: {response.StatusCode}");
-                }
-            }
-            catch (Exception ex)
+            if (response.IsSuccessStatusCode)
             {
-                Console.WriteLine($"Erro ao tentar fazer a chamada da API: {ex.Message}");
+                string responseData = await response.Content.ReadAsStringAsync();
+                Console.WriteLine("Chamada da API concluída com sucesso!");
+                Console.WriteLine("Dados recebidos: ");
+                Console.WriteLine(responseData);
+                Console.WriteLine($"ChamadaApiAsync está agora executando na thread ID: {Environment.CurrentManagedThreadId}");
             }
+            else
+            {
+                Console.WriteLine($"Erro na chamada da API. Código de status: {response.StatusCode}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao tentar fazer a chamada da API: {ex.Message}");
         }
     }
 }
