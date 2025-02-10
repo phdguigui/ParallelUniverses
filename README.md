@@ -2,9 +2,24 @@
 
 ![image0_0](https://github.com/user-attachments/assets/0b107583-a199-460c-bb98-63f398ac757d)
 
+# Welcome to the Parallel Computing Repository 🚀🌌
+
+This repository is dedicated to exploring the concepts of parallelism, concurrency, multithreading, and thread management in computing. Whether you're working with a single-core CPU or leveraging the power of a multicore processor, understanding these concepts is essential for building efficient and high-performance applications.
+
+In this repository, you'll find detailed explanations, examples, and practical use cases related to:
+
+- **CPU Architecture**: Learn about multicore and single-core systems, and how processes are managed in each scenario.
+- **Threads and Multithreading**: Understand the role of threads in multitasking, and how multithreading enhances performance by executing multiple tasks concurrently.
+- **Thread Pools**: Discover how thread pools help manage resources efficiently by reusing threads for short-lived tasks.
+- **.NET Examples**: Practical examples in C# showcasing how to implement parallelism, concurrency, and multithreading.
+
+By diving into this repository, you'll gain insights into key performance optimization techniques and how to effectively manage resources, especially in systems with high concurrency demands like web servers and cloud applications. 🌐⚡
+
+Feel free to explore the content, contribute, and ask any questions you may have! Together, let's unlock the power of parallel computing! 💻🔧
+
 # CPU 🖥️
 
-The CPU is responsible for executing, processing, and computing tasks, programs, and processes using threads. As mentioned by (author's name), it is now common to use a single-core server for web hosting. For example, with a CPU that has 4 cores, you can divide these 4 cores into 4 different virtual machines, each with 1 core, allowing you to run more virtual machines. But how does the CPU execute processes? There are several methods for doing so, which are explained below.
+The CPU is responsible for executing, processing, and computing tasks, programs, and processes using threads. As mentioned by Rainer Stropek ([I strongly recommend you to watch this professor's classes](https://www.youtube.com/watch?v=FIZVKteEFyk)), it is now common to use a single-core server for web hosting. For example, with a CPU that has 4 cores, you can divide these 4 cores into 4 different virtual machines, each with 1 core, allowing you to run more virtual machines. But how does the CPU execute processes? There are several methods for doing so, which are explained below.
 
 ## Multicore 🧑‍🔬
 
@@ -200,3 +215,6 @@ Choosing between creating new threads or using a thread pool depends on the natu
 
 Understanding these techniques and when to apply them can have a significant impact on the performance and scalability of systems, especially in high-demand environments like servers and web services. 🌐🚀
 
+## 🌟Em homenagem a Pamela Cristina Bins 🌸˚˖𓍢ִ໋🌷͙֒✧🩷˚⋆🌟
+
+## Developed by Guilherme Siedschlag 👓
